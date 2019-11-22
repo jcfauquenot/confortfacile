@@ -11,6 +11,13 @@
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
 
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+            <a>{{ app.user.id }}</a>
+        </div>
+    {% endif %}
+
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code><a href="{{ '/Applications/MAMP/htdocs/confortfacile/src/Controller/PizzaController.php'|file_link(0) }}">src/Controller/PizzaController.php</a></code></li>
