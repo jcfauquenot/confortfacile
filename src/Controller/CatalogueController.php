@@ -6,18 +6,17 @@ use App\Service\MessageGenerator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class PizzaController extends AbstractController
+class CatalogueController extends AbstractController
 {
     /**
-     * @Route("/pizza", name="pizza")
+     * @Route("/catalogue", name="pizza")
      */
     public function index(MessageGenerator $messageGenerator)
     {
-
         $message = $messageGenerator->getHappyMessage();
 
-        return $this->render('pizza/index.html.twig', [
-            'controller_name' => 'PizzaController',
+        return $this->render('catalogue/index.html.twig', [
+            'controller_name' => 'CatalogueController',
             'message' => $message,
         ]);
     }

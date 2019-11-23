@@ -12,12 +12,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Knp\Component\Pager\PaginatorInterface;
 
 /**
- * @Route("/product")
+ * @Route("/catalogue")
  */
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/", name="product_index", methods={"GET"})
+     * @Route("/product", name="product_index", methods={"GET"})
      */
     public function index(ProductRepository $productRepository, Request $request, PaginatorInterface $paginator): Response
     {
